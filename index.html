@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workshop2 - Super Placeholder</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
+</head>
+<body>
+    
+    <br>
+    <div class="container">
+        <div class="form-group">
+            <label for="usr">Name/Email</label>
+            <input type="email" class="form-control" id="usr" placeholder="ป้อนอีเมลของคุณ">
+        </div>
+        <div class="form-group">
+            <label for="pwd">Password :</label>
+            <input type="password" class="form-control" id="pwd" placeholder="ป้อนรหัสผ่าน">
+        </div>
+    </div>
+
+    <script src="superplaceholder.js"></script>
+    <script>
+        superplaceholder({
+            el: document.getElementById('usr'),
+            sentences: [ 'กรุณาป้อนรหัสผ่านของคุณ', 'เพื่อลงทะเบียนเข้าใช้งาน'],
+            options: {
+                loop:true
+            }
+        });
+        superplaceholder({
+            el: document.getElementById('pwd'),
+            sentences: [ 'กรุณาป้อนรหัสผ่านของคุณ', 'เพื่อลงทะเบียนเข้าใช้งาน','ป้อน 8-10 ตัวอักษร'],
+            options:{
+                loop:true
+            }
+        });
+    </script>
+    
+</body>
+</html>
